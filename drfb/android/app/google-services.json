@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "16924622546",
+    "project_id": "dr-fb-12082024",
+    "storage_bucket": "dr-fb-12082024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16924622546:android:1d0997d97568db1fcff70b",
+        "android_client_info": {
+          "package_name": "com.example.drfb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJoztSXu8s8VVzLrOygz674ILOBDTZGqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

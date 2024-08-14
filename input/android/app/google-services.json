@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "723284804784",
+    "firebase_url": "https://drfn-d6eb6-default-rtdb.firebaseio.com",
+    "project_id": "drfn-d6eb6",
+    "storage_bucket": "drfn-d6eb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723284804784:android:8151cfedc8bdfd784f6775",
+        "android_client_info": {
+          "package_name": "com.driveready.fbdrfn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArKLRzej6V7MFq05uF6BbB3_JaW0RIbeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723284804784:android:08670a313476eeb44f6775",
+        "android_client_info": {
+          "package_name": "com.example.input"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArKLRzej6V7MFq05uF6BbB3_JaW0RIbeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
