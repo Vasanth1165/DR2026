@@ -84,15 +84,22 @@ class _LoginPageState extends State<LoginPage> {
             email: emailCtrl.text.trim(), password: passCtrl.text.trim())
         .then((value) {
       print("Loged in with ${emailCtrl.text} at ${DateTime.now()}");
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthChange()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>AuthChange()));
     }).onError((error, stackTrace) {
       if (error is SocketException) {
         print("Please connect to the network");
       } else if (error is FirebaseAuthException) {
         print("issue with Auth ${error.message}");
+        authErrors(error.code);
       } else {
         print("issue ${error}");
       }
     });
+  }
+
+  void authErrors(String code){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+            content: Text(code.replaceAll("-", " ").toString())));
   }
 }

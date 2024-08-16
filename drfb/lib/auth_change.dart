@@ -1,4 +1,5 @@
 import 'package:drfb/home_page.dart';
+import 'package:drfb/multiple_auth_apge.dart';
 import 'package:drfb/signup_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -13,13 +14,13 @@ class AuthChange extends StatefulWidget {
 class _AuthChangeState extends State<AuthChange> {
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
+    return StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder:(context,snapshot){
           if(snapshot.hasData){
             return HomePage();
           }else{
-            return SignUpPage();
+            return MultiAuthPage();
           }
         }
     );

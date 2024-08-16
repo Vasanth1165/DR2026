@@ -45,7 +45,6 @@ class _SignUpPageState extends State<SignUpPage> {
             GestureDetector(
               onTap: (){
                 if(passCtrl.text.trim().isNotEmpty
-                    && passCtrl.text.trim().length>=6
                     &&  emailCtrl.text.trim().isNotEmpty){
                   createAccount();
                 }else {
@@ -95,10 +94,21 @@ class _SignUpPageState extends State<SignUpPage> {
       if(error is SocketException){
         print("Please connect to the network");
       }else if( error is FirebaseAuthException){
-        print("issue with Auth ${error.message}");
+        print("issue ${error.code}");
+        authErrors(error.code);
       }else{
         print("issue ${error}");
       }
     });
+  }
+
+  void authErrors(String code){
+    if(code == "email-already-in-use"){
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Email already in Use")));
+    }else{
+      String mess= code.replaceAll("-", " ").toString();
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(mess)));
+
+    }
   }
 }
