@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text("${_auth.currentUser!.email}",style: TextStyle(fontSize: 32),),
+          Text("${_auth.currentUser!.phoneNumber}",style: TextStyle(fontSize: 32),),
           SizedBox(
             height: 20,
           ),

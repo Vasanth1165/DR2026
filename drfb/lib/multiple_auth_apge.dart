@@ -1,5 +1,6 @@
 
 import 'package:drfb/otp_view.dart';
+import 'package:drfb/phone_auth_page.dart';
 import 'package:drfb/signup_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -35,9 +36,14 @@ class _MultiAuthPageState extends State<MultiAuthPage> {
           SizedBox(
             height: 20,
           ),
+          // ElevatedButton(onPressed: (){
+          //   Navigator.push(context, MaterialPageRoute(builder: (context)=> OtPView()));
+          // }, child: Text("OTP VIEW")),
+
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> OtPView()));
-          }, child: Text("OTP VIEW")),
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> PhoneAuthPage()));
+          }, child: Text("Phone"))
+
 
         ],
       ),

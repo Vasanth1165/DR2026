@@ -1,8 +1,6 @@
+
 import 'package:drfb/auth_change.dart';
 import 'package:drfb/firebase_options.dart';
-import 'package:drfb/multiple_auth_apge.dart';
-import 'package:drfb/otp_view.dart';
-import 'package:drfb/signup_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MultiAuthPage(),
+      home: AuthChange(),
     );
   }
 }

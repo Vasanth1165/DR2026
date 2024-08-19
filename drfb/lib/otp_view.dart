@@ -1,6 +1,10 @@
+import 'package:drfb/auth_change.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 class OtPView extends StatelessWidget {
+  final String verifyId;
+  OtPView({super.key,required this.verifyId});
 
   String otp="";
 
@@ -48,7 +52,24 @@ class OtPView extends StatelessWidget {
                 ),
               ),
             ),)
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(onPressed: () async{
+            FirebaseAuth auth = FirebaseAuth.instance;
+            print("OTP-------------------$otp");
+            PhoneAuthCredential credential =PhoneAuthProvider.credential(verificationId: verifyId, smsCode: otp);
+
+            await auth.signInWithCredential(credential)
+                .then((value){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> AuthChange()));
+                })
+                .onError((error, stackTrace){
+
+            });
+
+          }, child: Text("Verify OTP"))
         ],
       )
     );
