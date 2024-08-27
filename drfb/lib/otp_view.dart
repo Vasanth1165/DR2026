@@ -59,11 +59,16 @@ class OtPView extends StatelessWidget {
           ElevatedButton(onPressed: () async{
             FirebaseAuth auth = FirebaseAuth.instance;
             print("OTP-------------------$otp");
-            PhoneAuthCredential credential =PhoneAuthProvider.credential(verificationId: verifyId, smsCode: otp);
-
+            PhoneAuthCredential credential = PhoneAuthProvider.credential(
+                verificationId: verifyId,
+                smsCode: otp
+            );
             await auth.signInWithCredential(credential)
                 .then((value){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> AuthChange()));
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(
+                      builder: (context)=> AuthChange()
+                  ));
                 })
                 .onError((error, stackTrace){
 

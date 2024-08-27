@@ -28,7 +28,11 @@ class PhoneAuthPage extends StatelessWidget {
                     print(err);
                   },
                   codeSent: (val,num){
-                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=> OtPView(verifyId: val)));
+                    Navigator.pushReplacement(
+                        context,MaterialPageRoute(
+                        builder: (context)=> OtPView(
+                            verifyId: val)
+                    ));
                   },
                   codeAutoRetrievalTimeout: (val){
 
