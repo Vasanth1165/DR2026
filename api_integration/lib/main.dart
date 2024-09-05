@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:api_integration/chat_bot.dart';
 import 'package:api_integration/users_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserTabs(),
+      home: ChatBot(),
     );
   }
 }
